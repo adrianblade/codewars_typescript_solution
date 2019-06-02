@@ -1,0 +1,35 @@
+{
+  "name": "com.adr",
+  "version": "1.0.0",
+  "description": "vowel-count-kata",
+  "main": "app.js",
+  "scripts": {
+    "tsc": "tsc",
+    "tsc:w": "tsc -w",
+    "test": "mocha -r ts-node/register tests/**/*.test.ts",
+    "lite": "lite-server",
+    "start": "concurrently \"npm run tsc:w\" \"npm run lite\" "
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/adrianblade/vowel-count-kata.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/adrianblade/vowel-count-kata/issues"
+  },
+  "homepage": "https://github.com/adrianblade/vowel-count-kata#readme",
+  "devDependencies": {
+    "@types/chai": "^4.1.2",
+    "@types/mocha": "^2.2.48",
+    "chai": "^4.2.0",
+    "concurrently": "^4.1.0",
+    "lite-server": "^2.4.0",
+    "mocha": "^5.2.0",
+    "mocha-typescript": "^1.1.12",
+    "nyc": "^13.3.0",
+    "ts-node": "^8.0.3",
+    "typescript": "^3.4.2"
+  }
+}

@@ -1,11 +1,9 @@
-# Vowel-count-kata
+# Codewars Solutions on Typescript
 
-Return the number (count) of vowels in the given string.
+[![CodeWars](https://www.codewars.com/users/adrianblade/badges/large)](https://www.codewars.com/users/adrianblade)
 
-We will consider a, e, i, o, and u as vowels for this Kata.
 
-The input string will only consist of lower case letters and/or spaces.
-
-```npm test ``` for unit testing
-
-https://www.codewars.com/kata/54ff3102c1bad923760001f3/train/typescript
+## My Solutions
+| kyu | Codewars Kate | My Solutions |
+| --- | --- | --- |
+| 8 | [Vowel Count](https://www.codewars.com/kata/54ff3102c1bad923760001f3) | [square_into_square.py](https://github.com/adrianblade/codewars_typescript_solution/blob/master/src/8kyu/vowel-count/vowel-count.ts) |

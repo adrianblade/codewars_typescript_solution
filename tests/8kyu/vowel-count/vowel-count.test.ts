@@ -1,4 +1,4 @@
-import solution = require('../src/app');
+import solution = require('../../../src/8kyu/vowel-count/vowel-count');
 import {assert} from "chai";
 
 describe("getCount", function(){

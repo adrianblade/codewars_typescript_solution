@@ -21,7 +21,7 @@
   },
   "homepage": "https://github.com/adrianblade/vowel-count-kata#readme",
   "devDependencies": {
-    "@types/chai": "^4.1.2",
+    "@types/chai": "^4.1.7",
     "@types/mocha": "^2.2.48",
     "chai": "^4.2.0",
     "concurrently": "^4.1.0",
@@ -29,7 +29,7 @@
     "mocha": "^5.2.0",
     "mocha-typescript": "^1.1.12",
     "nyc": "^13.3.0",
-    "ts-node": "^8.0.3",
-    "typescript": "^3.4.2"
+    "ts-node": "^8.3.0",
+    "typescript": "^3.5.2"
   }
 }

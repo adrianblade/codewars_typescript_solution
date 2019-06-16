@@ -7,11 +7,10 @@ export class G964 {
         for (let i = 0 ;i<contactList.length; i++) {
           let line = contactList[i];
           if (line.includes(num)) {
-            if (founded === true) {
+            if (founded) {
               return "Error => Too many people: " + num;
             }
             result += "Phone => " + num + ", ";
-            line = line;
             var name = line.substring(
                 line.lastIndexOf("<") + 1,
                 line.lastIndexOf(">")
@@ -28,7 +27,7 @@ export class G964 {
             founded = true;
           }
       }
-      if (founded === false) {
+      if (!founded) {
         return "Error => Not found: "+ num;
       }
       return result;

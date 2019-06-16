@@ -11,18 +11,20 @@ export class G964 {
               return "Error => Too many people: " + num;
             }
             result += "Phone => " + num + ", ";
-            line = line.trim().replace(num, "");
+            line = line;
             var name = line.substring(
                 line.lastIndexOf("<") + 1,
                 line.lastIndexOf(">")
             );
             result += "Name => " + name + ", ";
             var cleanAddress = line.trim()
-                          .replace("<" + name + ">", "")
-                          .replace(/[\|&;\$%@"*<>\(\)\+,]/g, "")
-                          .replace("  "," ");
+                          .replace(num, "").trim()
+                          .replace("<" + name + ">", "").trim()
+                          .replace("_", " ").trim()
+                          .replace(/[\|&;\$%@"!*<>_\(\)\+/?:,]/g, "").trim()
+                          .replace("  "," ").trim();
 
-            result += "Address => " + cleanAddress.trim();
+            result += "Address => " + cleanAddress;
             founded = true;
           }
       }

@@ -32,4 +32,27 @@ export class G964 {
       }
       return result;
     }
+
+    public static phone2 = (strng, num) => {
+        const lines = strng.split('\n');
+        const findLines = lines.filter((line) => line.includes(num));
+
+        if (findLines.length === 0) {
+          return `Error => Not found: ${num}`;
+        } else if (findLines.length > 1) {
+          return `Error => Too many people: ${num}`;
+        } else {
+          let line = findLines[0];
+          const userRegex = /<([^<]+)>/g;
+
+          const matchArr = line.match(userRegex);
+          const wordWithBrackets = matchArr[0];
+          line = line.replace(wordWithBrackets, ' ').replace('+' + num, ' ');
+
+          const userName = wordWithBrackets.substring(1, wordWithBrackets.length - 1);
+
+          return `Phone => ${num}, Name => ${userName}, Address => ${line.replace(/[^a-zA-Z\d\s-.]/g, ' ').replace(/\s+/g, ' ').trim()}`
+
+        }
+    }
 }

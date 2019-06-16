@@ -8,14 +8,14 @@ export class G964 {
           let line = contactList[i];
           if (line.includes(num)) {
             if (founded) {
-              return "Error => Too many people: " + num;
+              return `Error => Too many people: ${num}`;
             }
-            result += "Phone => " + num + ", ";
+            result += `Phone => ${num}, `;
             var name = line.substring(
                 line.lastIndexOf("<") + 1,
                 line.lastIndexOf(">")
             );
-            result += "Name => " + name + ", ";
+            result += `Name => ${name}, `;
             var cleanAddress = line.trim()
                           .replace(num, "").trim()
                           .replace("<" + name + ">", "").trim()
@@ -23,12 +23,12 @@ export class G964 {
                           .replace(/[\|&;\$%@"!*<>_\(\)\+/?:,]/g, "").trim()
                           .replace("  "," ").trim();
 
-            result += "Address => " + cleanAddress;
+            result += `Address => ${cleanAddress}`;
             founded = true;
           }
       }
       if (!founded) {
-        return "Error => Not found: "+ num;
+        return `Error => Not found: ${num}`;
       }
       return result;
     }

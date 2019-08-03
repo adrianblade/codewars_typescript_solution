@@ -15,10 +15,10 @@ describe("hist", function() {
         var sol = "u  2     **\rw  5     *****\rx  2     **\rz  31    *******************************";
         testing(s, sol);
     })
-    /*it("Basic tests", function() {
+    it("Basic tests", function() {
       testing("tpwaemuqxdmwqbqrjbeosjnejqorxdozsxnrgpgqkeihqwybzyymqeazfkyiucesxwutgszbenzvgxibxrlvmzihcb","u  3     ***\rw  4     ****\rx  6     ******\rz  6     ******")
-    })*/
-    /*it("Basic tests", function() {
+    })
+    it("Basic tests", function() {
       testing("aaifzlnderpeurcuqjqeywdq", "u  2     **\rw  1     *\rz  1     *")
-    })*/
+    })
 });

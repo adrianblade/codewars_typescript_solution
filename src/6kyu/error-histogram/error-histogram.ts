@@ -33,7 +33,7 @@ function getlength(number) {
     return number.toString().length;
 }
 
-export function hist2(s: string): string {
+/*export function hist2(s: string): string {
   interface Hash<T> {
       [key: string]: T;
   }
@@ -46,4 +46,4 @@ export function hist2(s: string): string {
     }
   }
   return (histogram.substring(0, histogram.length - 1));
-}
+}*/

@@ -6,11 +6,11 @@ export function hist(s: string): string {
   const zCount= s.split("z").length - 1;
 
   return drawStats("u", uCount)
-          + drawR(wCount)
+          + drawR(wCount, uCount === 0)
           + drawStats("w", wCount)
-          + drawR(xCount)
+          + drawR(xCount, uCount + wCount === 0)
           + drawStats("x", xCount)
-          + drawR(zCount)
+          + drawR(zCount, uCount + wCount + xCount === 0)
           + drawStats("z", zCount);
 }
 
@@ -18,7 +18,6 @@ function drawStats(x, count) {
   if (count < 1) {
     return "";
   }
-
   if (getlength(count) == 1 ) {
     return x+ "  " + count + "     " + Array( count + 1 ).join(STAR) ;
   } else {
@@ -26,8 +25,8 @@ function drawStats(x, count) {
   }
 }
 
-function drawR(next) {
-  return next === 0 ? "" : "\r";
+function drawR(next, first) {
+  return (next === 0 || first) ? "" : "\r";
 }
 
 function getlength(number) {

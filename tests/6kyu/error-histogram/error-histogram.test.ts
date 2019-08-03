@@ -21,4 +21,10 @@ describe("hist", function() {
     it("Basic tests", function() {
       testing("aaifzlnderpeurcuqjqeywdq", "u  2     **\rw  1     *\rz  1     *")
     })
+    it("Basic tests", function() {
+      testing("slirsxpbiholwngafelbbfxrpvqbcaykiazzgivjwgdqmz", "w  2     **\rx  2     **\rz  3     ***")
+    })
+    it("Basic tests", function() {
+      testing("bfcmxlngtmjrnotmvgq", "x  1     *")
+    })
 });

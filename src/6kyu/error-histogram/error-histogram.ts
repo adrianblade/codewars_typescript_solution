@@ -32,3 +32,18 @@ function drawR(next, first) {
 function getlength(number) {
     return number.toString().length;
 }
+
+export function hist2(s: string): string {
+  interface Hash<T> {
+      [key: string]: T;
+  }
+  const r: Hash<number> = { 'u': 0, 'w': 0, 'x': 0, 'z': 0 };
+  let histogram = "";
+  for (var key in r) {
+    r[key] = s.split('').filter(error => error === key).length;
+    if ( r[key] !== 0 ) {
+      histogram += `${key}  ${r[key]}${' '.repeat(6 - String(r[key]).length)}${'*'.repeat(r[key])}\r`;
+    }
+  }
+  return (histogram.substring(0, histogram.length - 1));
+}
